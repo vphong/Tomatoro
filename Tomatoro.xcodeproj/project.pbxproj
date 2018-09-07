@@ -7,15 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C3B0D4698AB2CBFBB877465D /* Pods_Tomatoro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF12D19BCA8FE4DE702146B8 /* Pods_Tomatoro.framework */; };
 		CA62B689214203B3008C8DED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B688214203B3008C8DED /* AppDelegate.swift */; };
+		CA62B68B214203B3008C8DED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B68A214203B3008C8DED /* ViewController.swift */; };
 		CA62B68E214203B3008C8DED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA62B68C214203B3008C8DED /* Main.storyboard */; };
 		CA62B690214203B6008C8DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA62B68F214203B6008C8DED /* Assets.xcassets */; };
 		CA62B693214203B6008C8DED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA62B691214203B6008C8DED /* LaunchScreen.storyboard */; };
 		CA62B69E214203B6008C8DED /* TomatoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B69D214203B6008C8DED /* TomatoroTests.swift */; };
-		CA62B6A9214204B7008C8DED /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B6A8214204B7008C8DED /* TimerViewController.swift */; };
-		CA62B6AE2142CF3A008C8DED /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B6AD2142CF3A008C8DED /* Pomodoro.swift */; };
-		CE352F2CCFF92F9FF5E7E8E7 /* Pods_TomatoroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236BFCD39BF6B82E4E312894 /* Pods_TomatoroTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +26,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		236BFCD39BF6B82E4E312894 /* Pods_TomatoroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TomatoroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		269DF7B6B0A5807396101428 /* Pods-TomatoroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomatoroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TomatoroTests/Pods-TomatoroTests.debug.xcconfig"; sourceTree = "<group>"; };
-		594020017A5C36DB4BAD25FD /* Pods-Tomatoro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tomatoro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tomatoro/Pods-Tomatoro.debug.xcconfig"; sourceTree = "<group>"; };
-		91367F8D271AC6F1BD173491 /* Pods-Tomatoro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tomatoro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tomatoro/Pods-Tomatoro.release.xcconfig"; sourceTree = "<group>"; };
-		925513D0B5367DC1BF80A245 /* Pods-TomatoroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomatoroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TomatoroTests/Pods-TomatoroTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA62B685214203B3008C8DED /* Tomatoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomatoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA62B688214203B3008C8DED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA62B68A214203B3008C8DED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CA62B68D214203B3008C8DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA62B68F214203B6008C8DED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA62B692214203B6008C8DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,9 +36,6 @@
 		CA62B699214203B6008C8DED /* TomatoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA62B69D214203B6008C8DED /* TomatoroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoroTests.swift; sourceTree = "<group>"; };
 		CA62B69F214203B6008C8DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA62B6A8214204B7008C8DED /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
-		CA62B6AD2142CF3A008C8DED /* Pomodoro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pomodoro.swift; sourceTree = "<group>"; };
-		EF12D19BCA8FE4DE702146B8 /* Pods_Tomatoro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tomatoro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3B0D4698AB2CBFBB877465D /* Pods_Tomatoro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,41 +50,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE352F2CCFF92F9FF5E7E8E7 /* Pods_TomatoroTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C267359F7E46617E3740387 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EF12D19BCA8FE4DE702146B8 /* Pods_Tomatoro.framework */,
-				236BFCD39BF6B82E4E312894 /* Pods_TomatoroTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		771859443420CBBECC1731DC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				594020017A5C36DB4BAD25FD /* Pods-Tomatoro.debug.xcconfig */,
-				91367F8D271AC6F1BD173491 /* Pods-Tomatoro.release.xcconfig */,
-				269DF7B6B0A5807396101428 /* Pods-TomatoroTests.debug.xcconfig */,
-				925513D0B5367DC1BF80A245 /* Pods-TomatoroTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		CA62B67C214203B3008C8DED = {
 			isa = PBXGroup;
 			children = (
 				CA62B687214203B3008C8DED /* Tomatoro */,
 				CA62B69C214203B6008C8DED /* TomatoroTests */,
 				CA62B686214203B3008C8DED /* Products */,
-				771859443420CBBECC1731DC /* Pods */,
-				2C267359F7E46617E3740387 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,10 +77,9 @@
 		CA62B687214203B3008C8DED /* Tomatoro */ = {
 			isa = PBXGroup;
 			children = (
-				CA62B6AC21424F91008C8DED /* Models */,
 				CA62B688214203B3008C8DED /* AppDelegate.swift */,
+				CA62B68A214203B3008C8DED /* ViewController.swift */,
 				CA62B68C214203B3008C8DED /* Main.storyboard */,
-				CA62B6A8214204B7008C8DED /* TimerViewController.swift */,
 				CA62B68F214203B6008C8DED /* Assets.xcassets */,
 				CA62B691214203B6008C8DED /* LaunchScreen.storyboard */,
 				CA62B694214203B6008C8DED /* Info.plist */,
@@ -131,14 +96,6 @@
 			path = TomatoroTests;
 			sourceTree = "<group>";
 		};
-		CA62B6AC21424F91008C8DED /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CA62B6AD2142CF3A008C8DED /* Pomodoro.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,11 +103,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA62B6A2214203B6008C8DED /* Build configuration list for PBXNativeTarget "Tomatoro" */;
 			buildPhases = (
-				423E85E0EF4E53B290E4160D /* [CP] Check Pods Manifest.lock */,
 				CA62B681214203B3008C8DED /* Sources */,
 				CA62B682214203B3008C8DED /* Frameworks */,
 				CA62B683214203B3008C8DED /* Resources */,
-				5CFB32C80DF30C7118D3A0B2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,7 +120,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA62B6A5214203B6008C8DED /* Build configuration list for PBXNativeTarget "TomatoroTests" */;
 			buildPhases = (
-				069A3067000865D9AAF74FC2 /* [CP] Check Pods Manifest.lock */,
 				CA62B695214203B6008C8DED /* Sources */,
 				CA62B696214203B6008C8DED /* Frameworks */,
 				CA62B697214203B6008C8DED /* Resources */,
@@ -238,71 +192,13 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		069A3067000865D9AAF74FC2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TomatoroTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		423E85E0EF4E53B290E4160D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Tomatoro-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5CFB32C80DF30C7118D3A0B2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Tomatoro/Pods-Tomatoro-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DateTools/DateTools.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTools.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tomatoro/Pods-Tomatoro-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		CA62B681214203B3008C8DED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA62B6A9214204B7008C8DED /* TimerViewController.swift in Sources */,
+				CA62B68B214203B3008C8DED /* ViewController.swift in Sources */,
 				CA62B689214203B3008C8DED /* AppDelegate.swift in Sources */,
-				CA62B6AE2142CF3A008C8DED /* Pomodoro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +356,6 @@
 		};
 		CA62B6A3214203B6008C8DED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 594020017A5C36DB4BAD25FD /* Pods-Tomatoro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -478,7 +373,6 @@
 		};
 		CA62B6A4214203B6008C8DED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91367F8D271AC6F1BD173491 /* Pods-Tomatoro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -496,7 +390,6 @@
 		};
 		CA62B6A6214203B6008C8DED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 269DF7B6B0A5807396101428 /* Pods-TomatoroTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -517,7 +410,6 @@
 		};
 		CA62B6A7214203B6008C8DED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 925513D0B5367DC1BF80A245 /* Pods-TomatoroTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
