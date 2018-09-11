@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C3B0D4698AB2CBFBB877465D /* Pods_Tomatoro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF12D19BCA8FE4DE702146B8 /* Pods_Tomatoro.framework */; };
+		CA013B9121472D3300336F96 /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = CA013B8F21472D3300336F96 /* settings.json */; };
+		CA013B9221472D3300336F96 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CA013B9021472D3300336F96 /* loading.json */; };
+		CA013B9D2147315700336F96 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA013B9C2147315700336F96 /* Splash.storyboard */; };
+		CA517C3321438E0E00853686 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA517C3221438E0E00853686 /* ProgressView.swift */; };
 		CA62B689214203B3008C8DED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B688214203B3008C8DED /* AppDelegate.swift */; };
 		CA62B68E214203B3008C8DED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA62B68C214203B3008C8DED /* Main.storyboard */; };
 		CA62B690214203B6008C8DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA62B68F214203B6008C8DED /* Assets.xcassets */; };
-		CA62B693214203B6008C8DED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA62B691214203B6008C8DED /* LaunchScreen.storyboard */; };
 		CA62B69E214203B6008C8DED /* TomatoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B69D214203B6008C8DED /* TomatoroTests.swift */; };
 		CA62B6A9214204B7008C8DED /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B6A8214204B7008C8DED /* TimerViewController.swift */; };
 		CA62B6AE2142CF3A008C8DED /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B6AD2142CF3A008C8DED /* Pomodoro.swift */; };
@@ -34,11 +37,14 @@
 		594020017A5C36DB4BAD25FD /* Pods-Tomatoro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tomatoro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tomatoro/Pods-Tomatoro.debug.xcconfig"; sourceTree = "<group>"; };
 		91367F8D271AC6F1BD173491 /* Pods-Tomatoro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tomatoro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tomatoro/Pods-Tomatoro.release.xcconfig"; sourceTree = "<group>"; };
 		925513D0B5367DC1BF80A245 /* Pods-TomatoroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TomatoroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TomatoroTests/Pods-TomatoroTests.release.xcconfig"; sourceTree = "<group>"; };
+		CA013B8F21472D3300336F96 /* settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = settings.json; sourceTree = "<group>"; };
+		CA013B9021472D3300336F96 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		CA013B9C2147315700336F96 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		CA517C3221438E0E00853686 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		CA62B685214203B3008C8DED /* Tomatoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomatoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA62B688214203B3008C8DED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA62B68D214203B3008C8DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA62B68F214203B6008C8DED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CA62B692214203B6008C8DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA62B694214203B6008C8DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA62B699214203B6008C8DED /* TomatoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA62B69D214203B6008C8DED /* TomatoroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoroTests.swift; sourceTree = "<group>"; };
@@ -88,9 +94,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CA013B992147310700336F96 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA62B6A8214204B7008C8DED /* TimerViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CA1112472143464E00C047F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA013B8F21472D3300336F96 /* settings.json */,
+				CA013B9021472D3300336F96 /* loading.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CA517C3421438E1600853686 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA517C3221438E0E00853686 /* ProgressView.swift */,
+			);
+			name = Views;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		CA62B67C214203B3008C8DED = {
 			isa = PBXGroup;
 			children = (
+				CA1112472143464E00C047F7 /* Resources */,
 				CA62B687214203B3008C8DED /* Tomatoro */,
 				CA62B69C214203B6008C8DED /* TomatoroTests */,
 				CA62B686214203B3008C8DED /* Products */,
@@ -112,11 +145,12 @@
 			isa = PBXGroup;
 			children = (
 				CA62B6AC21424F91008C8DED /* Models */,
-				CA62B688214203B3008C8DED /* AppDelegate.swift */,
+				CA517C3421438E1600853686 /* Views */,
+				CA013B992147310700336F96 /* View Controllers */,
 				CA62B68C214203B3008C8DED /* Main.storyboard */,
-				CA62B6A8214204B7008C8DED /* TimerViewController.swift */,
+				CA62B688214203B3008C8DED /* AppDelegate.swift */,
+				CA013B9C2147315700336F96 /* Splash.storyboard */,
 				CA62B68F214203B6008C8DED /* Assets.xcassets */,
-				CA62B691214203B6008C8DED /* LaunchScreen.storyboard */,
 				CA62B694214203B6008C8DED /* Info.plist */,
 			);
 			path = Tomatoro;
@@ -223,8 +257,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA62B693214203B6008C8DED /* LaunchScreen.storyboard in Resources */,
+				CA013B9121472D3300336F96 /* settings.json in Resources */,
+				CA013B9221472D3300336F96 /* loading.json in Resources */,
 				CA62B690214203B6008C8DED /* Assets.xcassets in Resources */,
+				CA013B9D2147315700336F96 /* Splash.storyboard in Resources */,
 				CA62B68E214203B3008C8DED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,11 +318,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tomatoro/Pods-Tomatoro-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/DateTools/DateTools.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTools.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -301,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA62B6A9214204B7008C8DED /* TimerViewController.swift in Sources */,
+				CA517C3321438E0E00853686 /* ProgressView.swift in Sources */,
 				CA62B689214203B3008C8DED /* AppDelegate.swift in Sources */,
 				CA62B6AE2142CF3A008C8DED /* Pomodoro.swift in Sources */,
 			);
@@ -331,14 +368,6 @@
 				CA62B68D214203B3008C8DED /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CA62B691214203B6008C8DED /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA62B692214203B6008C8DED /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

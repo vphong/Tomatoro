@@ -1,16 +1,16 @@
 PODS:
-  - DateTools (2.0.0)
+  - lottie-ios (2.5.0)
 
 DEPENDENCIES:
-  - DateTools
+  - lottie-ios
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - DateTools
+    - lottie-ios
 
 SPEC CHECKSUMS:
-  DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
 
-PODFILE CHECKSUM: 08b2def9657e019dfb396640ca076cb66ad374bf
+PODFILE CHECKSUM: a906dc0ed5c092df41a835ba5d4a1a752a9e042c
 
 COCOAPODS: 1.5.3

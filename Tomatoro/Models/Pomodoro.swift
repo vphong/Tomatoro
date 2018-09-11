@@ -11,43 +11,58 @@ import Foundation
 // A traditional Pomodoro timer.
 class Pomodoro {
     
-    private var startTime: Date?
-    public weak var runner: Timer?
+    // MARK: - Properties
+    public weak var runner: Timer? // to be set by view controller
     
-    public var elapsedTime: TimeInterval {
-        if let startTime = self.startTime {
-            return -startTime.timeIntervalSinceNow
-        } else {
-            return 0
-        }
-    }
-    
-    public var elapsedTimeAsString: String {
-        let minutes = UInt(elapsedTime / 60)
-        let seconds = UInt(elapsedTime.truncatingRemainder(dividingBy: 60))
-        let milliseconds = UInt((elapsedTime * 10).truncatingRemainder(dividingBy: 10))
-        
-        return String(format: "%02d:%02d.%d", minutes, seconds, milliseconds)
-    }
-    
+    public var startTimestamp: Double = 0
+    public var elapsedTime: Double = 0
+
     public var isRunning: Bool {
-        return startTime != nil
+        return runner != nil
     }
     
-    // MARK: - Runner functions
+    public var length: Double = 60*25
     
-    init() {
-        // todo
+    public var progress: Double {
+        return elapsedTime / length
+    }
+    
+    // MARK: - Functions
+    public func setLength(to newLength: Double) {
+        length = newLength
     }
     
     public func start() {
-        startTime = Date()
+        startTimestamp = Date().timeIntervalSinceReferenceDate - elapsedTime
     }
     
-    public func stop() {
-        startTime = nil
+    public func pause() {
+        elapsedTime = Date().timeIntervalSinceReferenceDate - startTimestamp
+        stopRunner()
+    }
+    
+    public func reset() {
+        startTimestamp = 0
+        elapsedTime = 0
+        stopRunner()
+    }
+    
+    private func stopRunner()  {
+        runner?.invalidate()
+        runner = nil
     }
     
     
     
+}
+
+// MARK: - Helper extension to format elapsed time
+extension Double {
+    func elapsedTimeToString() -> String {
+        let minutes = Int(self / 60)
+        let seconds = Int(self.truncatingRemainder(dividingBy: 60))
+        let milliseconds = Int((self * 10).truncatingRemainder(dividingBy: 10))
+        
+        return String(format: "%02d:%02d.%d", minutes, seconds, milliseconds)
+    }
 }
