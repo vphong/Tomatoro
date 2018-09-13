@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,63 +16,77 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TimerViewController" customModule="Tomatoro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZp-CY-bJg">
-                                <rect key="frame" x="131" y="431" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HrI-4e-w9L"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMr-Xd-Qjc">
-                                <rect key="frame" x="208" y="431" width="39" height="30"/>
-                                <state key="normal" title="Reset"/>
-                                <connections>
-                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNr-O1-3SC"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8K5-f8-dWj" userLabel="Progress View" customClass="ProgressView" customModule="Tomatoro" customModuleProvider="target">
-                                <rect key="frame" x="54" y="100" width="267" height="267"/>
+                                <rect key="frame" x="19" y="180" width="376" height="376"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjY-MX-7Ia">
-                                        <rect key="frame" x="79.5" y="115.5" width="108.5" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjY-MX-7Ia">
+                                        <rect key="frame" x="134.66666666666666" y="170.66666666666669" width="108.33333333333334" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="PjY-MX-7Ia" firstAttribute="centerX" secondItem="8K5-f8-dWj" secondAttribute="centerX" id="evf-gt-tua"/>
-                                    <constraint firstItem="PjY-MX-7Ia" firstAttribute="centerY" secondItem="8K5-f8-dWj" secondAttribute="centerY" id="hpo-kF-daa"/>
-                                    <constraint firstAttribute="width" secondItem="8K5-f8-dWj" secondAttribute="height" multiplier="1:1" id="yS9-7u-aIa"/>
+                                    <constraint firstAttribute="width" secondItem="8K5-f8-dWj" secondAttribute="height" multiplier="1:1" id="SXW-32-xie"/>
+                                    <constraint firstItem="PjY-MX-7Ia" firstAttribute="centerX" secondItem="8K5-f8-dWj" secondAttribute="centerX" id="Si6-wG-ABq"/>
+                                    <constraint firstItem="PjY-MX-7Ia" firstAttribute="centerY" secondItem="8K5-f8-dWj" secondAttribute="centerY" id="ghV-6h-BLZ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vlb-PK-tdX" customClass="LOTAnimatedSwitch">
-                                <rect key="frame" x="299" y="587" width="60" height="60"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="W3n-Wg-fML"/>
-                                    <constraint firstAttribute="height" constant="60" id="mQU-4A-H0E"/>
-                                </constraints>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bNj-oR-GJf">
+                                <rect key="frame" x="20" y="666" width="374" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZp-CY-bJg">
+                                        <rect key="frame" x="0.0" y="15" width="124.66666666666667" height="30"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HrI-4e-w9L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMr-Xd-Qjc">
+                                        <rect key="frame" x="124.66666666666666" y="15" width="124.66666666666666" height="30"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNr-O1-3SC"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vlb-PK-tdX" customClass="LOTAnimatedSwitch">
+                                        <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="mQU-4A-H0E"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vlb-PK-tdX" secondAttribute="bottom" constant="20" id="5Mh-pX-qFB"/>
-                            <constraint firstItem="fZp-CY-bJg" firstAttribute="baseline" secondItem="IMr-Xd-Qjc" secondAttribute="baseline" id="7S7-Nf-0Le"/>
-                            <constraint firstItem="8K5-f8-dWj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="BNe-z4-itc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8K5-f8-dWj" secondAttribute="bottom" constant="50" id="3CG-Fp-5de"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bNj-oR-GJf" secondAttribute="bottom" constant="10" id="4po-DB-gfo">
+                                <variation key="heightClass=compact-widthClass=compact" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="8K5-f8-dWj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BNe-z4-itc"/>
                             <constraint firstItem="8K5-f8-dWj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BcP-jT-4AQ"/>
-                            <constraint firstItem="IMr-Xd-Qjc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="40" id="EVf-0w-ctg"/>
-                            <constraint firstItem="fZp-CY-bJg" firstAttribute="top" secondItem="8K5-f8-dWj" secondAttribute="bottom" constant="64" id="FeO-lf-Uj9"/>
-                            <constraint firstItem="8K5-f8-dWj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="RF1-ff-TPc"/>
-                            <constraint firstItem="fZp-CY-bJg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-40" id="Tm2-h2-wWG"/>
-                            <constraint firstItem="IMr-Xd-Qjc" firstAttribute="top" secondItem="8K5-f8-dWj" secondAttribute="bottom" constant="64" id="eH1-YB-LY0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vlb-PK-tdX" secondAttribute="trailing" constant="16" id="pJm-d1-yML"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bNj-oR-GJf" secondAttribute="trailing" constant="20" id="We0-l7-W5p"/>
+                            <constraint firstItem="8K5-f8-dWj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="aNq-sF-LTA">
+                                <variation key="heightClass=compact" constant="60"/>
+                            </constraint>
+                            <constraint firstItem="bNj-oR-GJf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mjF-tw-ZOn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3CG-Fp-5de"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="3CG-Fp-5de"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="progressView" destination="8K5-f8-dWj" id="qlM-ZB-yE5"/>

@@ -34,8 +34,10 @@ class TimerViewController: UIViewController {
         
         
         settingsControl.animationView.setAnimation(named: "settings")
+        settingsControl.animationView.frame = CGRect(x: 0, y: 0, width: 140, height: 140)
         settingsControl.animationView.contentMode = .scaleAspectFill
         settingsControl.animationView.backgroundColor = .clear
+        
 //        settingsView.translatesAutoresizingMaskIntoConstraints = false
     }
 
