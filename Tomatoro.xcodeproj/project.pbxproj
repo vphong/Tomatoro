@@ -11,6 +11,7 @@
 		CA013B9121472D3300336F96 /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = CA013B8F21472D3300336F96 /* settings.json */; };
 		CA013B9221472D3300336F96 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CA013B9021472D3300336F96 /* loading.json */; };
 		CA013B9D2147315700336F96 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA013B9C2147315700336F96 /* Splash.storyboard */; };
+		CA4342C3214ED3A6007990C5 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4342C2214ED3A6007990C5 /* Gradients.swift */; };
 		CA517C3321438E0E00853686 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA517C3221438E0E00853686 /* ProgressView.swift */; };
 		CA62B689214203B3008C8DED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B688214203B3008C8DED /* AppDelegate.swift */; };
 		CA62B68E214203B3008C8DED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA62B68C214203B3008C8DED /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		CA013B8F21472D3300336F96 /* settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = settings.json; sourceTree = "<group>"; };
 		CA013B9021472D3300336F96 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		CA013B9C2147315700336F96 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		CA4342C2214ED3A6007990C5 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
 		CA517C3221438E0E00853686 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		CA62B685214203B3008C8DED /* Tomatoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomatoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA62B688214203B3008C8DED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				CA013B9C2147315700336F96 /* Splash.storyboard */,
 				CA62B68F214203B6008C8DED /* Assets.xcassets */,
 				CA62B694214203B6008C8DED /* Info.plist */,
+				CA4342C2214ED3A6007990C5 /* Gradients.swift */,
 			);
 			path = Tomatoro;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA62B6A9214204B7008C8DED /* TimerViewController.swift in Sources */,
+				CA4342C3214ED3A6007990C5 /* Gradients.swift in Sources */,
 				CA517C3321438E0E00853686 /* ProgressView.swift in Sources */,
 				CA62B689214203B3008C8DED /* AppDelegate.swift in Sources */,
 				CA62B6AE2142CF3A008C8DED /* Pomodoro.swift in Sources */,

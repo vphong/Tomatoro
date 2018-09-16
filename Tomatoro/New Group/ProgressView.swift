@@ -16,10 +16,14 @@ import UIKit
     fileprivate var duration = 0.0
     
     // lazy initalization
-    @IBInspectable fileprivate lazy var trackLayer: CAShapeLayer = {
+    @IBInspectable fileprivate lazy var backgroundTrack: CAShapeLayer = {
         return CAShapeLayer()
     }()
-    @IBInspectable fileprivate lazy var progressLayer: CAShapeLayer = {
+    @IBInspectable fileprivate lazy var foregroundTrack: CAShapeLayer = {
+        return CAShapeLayer()
+    }()
+    
+    @IBInspectable fileprivate lazy var backgroundDisc: CAShapeLayer = {
         return CAShapeLayer()
     }()
     
@@ -37,19 +41,30 @@ import UIKit
     // MARK: - Layers
     
     fileprivate func createLayers() {
-        trackLayer = createLayer(color: UIColor.lightGray.cgColor)
-        progressLayer = createLayer(color: UIColor.cyan.cgColor)
-        progressLayer.strokeEnd = 0.0
-        progressLayer.transform = CATransform3DMakeRotation(-CGFloat.pi/2, 0, 0, 1)
+        backgroundTrack = createTrack(color: UIColor.lightGray.withAlphaComponent(0.5).cgColor)
+        foregroundTrack = createTrack(color: UIColor.white.cgColor)
+        foregroundTrack.strokeEnd = 0.0
+        foregroundTrack.transform = CATransform3DMakeRotation(-CGFloat.pi/2, 0, 0, 1)
         
-        self.layer.addSublayer(trackLayer)
-        self.layer.addSublayer(progressLayer)
+        backgroundDisc.path = circularPath(radiusOffset: 20)
+        backgroundDisc.fillColor = UIColor.white.withAlphaComponent(0.5).cgColor
+        backgroundDisc.zPosition = -10
+        
+        backgroundDisc.shadowPath = circularPath(radiusOffset: 30)
+        backgroundDisc.shadowColor = UIColor.black.cgColor
+        backgroundDisc.opacity = 1.0
+        backgroundDisc.shadowOffset = CGSize(width: 5, height: 5)
+        backgroundDisc.shadowRadius = 10
+        
+        self.layer.addSublayer(backgroundTrack)
+        self.layer.addSublayer(foregroundTrack)
+        self.layer.addSublayer(backgroundDisc)
     }
     
-    fileprivate func createLayer(color: CGColor) -> CAShapeLayer {
+    fileprivate func createTrack(color: CGColor) -> CAShapeLayer {
         let layer = CAShapeLayer()
         
-        setLayerPath(layer: layer)
+        layer.path = circularPath(radiusOffset: 40)
         
         // styling
         layer.lineCap = kCALineCapRound
@@ -63,18 +78,19 @@ import UIKit
     }
     
     override func layoutSubviews() {
-        setLayerPath(layer: self.trackLayer)
-        setLayerPath(layer: self.progressLayer)
+        self.backgroundTrack.path = circularPath(radiusOffset: 40)
+        self.foregroundTrack.path = circularPath(radiusOffset: 40)
+        self.backgroundDisc.path = circularPath(radiusOffset: 20)
         
-        progressLayer.frame = trackLayer.frame
-        progressLayer.position = trackLayer.position
-        progressLayer.position.y += self.frame.height
+        foregroundTrack.frame = backgroundTrack.frame
+        foregroundTrack.position = backgroundTrack.position
+        foregroundTrack.position.y += self.frame.height
     }
     
-    fileprivate func setLayerPath(layer: CAShapeLayer) {
+    fileprivate func circularPath(radiusOffset: Double) -> CGPath {
         let center = CGPoint(x: self.frame.width/2, y: self.frame.width/2)
-        let radius = self.frame.width/2 - 40
-        layer.path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).cgPath
+        let radius = self.frame.width/2 - CGFloat(radiusOffset)
+        return UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).cgPath
     }
     
     // MARK: - Animation
@@ -96,35 +112,36 @@ import UIKit
             animation.isRemovedOnCompletion = false
             animation.isAdditive = true
             
-            progressLayer.add(animation, forKey: "timerProgress")
+            foregroundTrack.add(animation, forKey: "timerProgress")
         } else {
             // resume, from pause
-            progressLayer.speed = 1.0
+            foregroundTrack.speed = 1.0
             
             // start animation from previous point
-            progressLayer.beginTime = progressLayer.timeOffset
+            foregroundTrack.beginTime = foregroundTrack.timeOffset
             
         }
     }
     
     public func pause() {
-        progressLayer.speed = 0.0
+        foregroundTrack.speed = 0.0
         
-        let pausedTime = progressLayer.convertTime(CACurrentMediaTime(), from: progressLayer)
-        progressLayer.timeOffset = pausedTime
+        let pausedTime = foregroundTrack.convertTime(CACurrentMediaTime(), from: foregroundTrack)
+        foregroundTrack.timeOffset = pausedTime
     }
     
     public func stop() {
         setInitialAnimation()
-        progressLayer.removeAllAnimations()
+        foregroundTrack.removeAllAnimations()
     }
     
     fileprivate func setInitialAnimation() {
         started = false
-        progressLayer.speed = 1.0
-        progressLayer.timeOffset = 0.0
-        progressLayer.beginTime = 0.0
-        progressLayer.strokeEnd = 0.0
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        foregroundTrack.speed = 1.0
+        foregroundTrack.timeOffset = 0.0
+        foregroundTrack.beginTime = 0.0
+        foregroundTrack.strokeEnd = 0.0
     }
     
     /*
@@ -134,4 +151,8 @@ import UIKit
      // Drawing code
      }
      */
+}
+
+extension CAShapeLayer {
+    
 }

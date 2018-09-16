@@ -46,7 +46,7 @@ struct Pomodoro {
     }
     
     public mutating func updateElapsedTime() {
-        elapsedTime = Date().timeIntervalSinceReferenceDate - startTimestamp
+        elapsedTime = Double(Int(Date().timeIntervalSinceReferenceDate - startTimestamp))
     }
     
     public mutating func pause() {

@@ -10,15 +10,14 @@ import UIKit
 import Lottie
 //import SRCountdownTimer
 
-class TimerViewController: UIViewController {
+@IBDesignable class TimerViewController: UIViewController {
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
 
     @IBOutlet weak var progressView: ProgressView!
-    
-    let settingsView = LOTAnimationView(name: "settings")
+    @IBInspectable let gradientLayer = CAGradientLayer()
     
     @IBOutlet weak var settingsControl: LOTAnimatedSwitch!
     
@@ -27,7 +26,6 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         
         resetButton.isEnabled = false
         timeLabel.text = pomodoro.duration.elapsedTimeToString()
@@ -36,7 +34,17 @@ class TimerViewController: UIViewController {
         settingsControl.animationView.frame = CGRect(x: 0, y: 0, width: 140, height: 140)
         settingsControl.animationView.contentMode = .scaleAspectFill
         settingsControl.animationView.backgroundColor = .clear
+        settingsControl.backgroundColor = .clear
         
+        
+        // styling
+        gradientLayer.colors = [UIColor(red: 1.00, green: 0.88, blue: 0.25, alpha:1.0).cgColor, UIColor(red: 0.98, green: 0.44, blue: 0.60, alpha: 1.0).cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.zPosition = -10
+        
+        self.view.layer.addSublayer(gradientLayer)
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,13 +65,15 @@ class TimerViewController: UIViewController {
             startButton.setTitle("Resume", for: .normal)
         } else {
             // play
+            print("init: \(pomodoro.elapsedTime)")
             pomodoro.runner = Timer.scheduledTimer(withTimeInterval: pomodoro.interval, repeats: true, block: { (timer) in
                 self.pomodoro.updateElapsedTime()
+                print("\(self.pomodoro.elapsedTime)")
                 self.updateTimeLabel()
             })
             pomodoro.start()
             
-            progressView.setDuration(duration: pomodoro.duration)
+            progressView.setDuration(duration: Double(pomodoro.duration))
             progressView.start()
             
             startButton.setTitle("Pause", for: .normal)
@@ -96,9 +106,6 @@ class TimerViewController: UIViewController {
     }
     
     
-    @IBAction func settingsButtonTapped(_ sender: Any) {
-        print("hi")
-    }
     /*
     // MARK: - Navigation
 
