@@ -29,6 +29,9 @@ struct Pomodoro {
     public lazy var timeLeft: Double = {
         return max(self.duration - self.elapsedTime, 0)
     }()
+    public lazy var progress: Double = {
+        return timeLeft / duration
+    }()
 
     public var isRunning: Bool {
         return runner != nil

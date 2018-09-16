@@ -18,8 +18,6 @@ class TimerViewController: UIViewController {
 
     @IBOutlet weak var progressView: ProgressView!
     
-    let settingsView = LOTAnimationView(name: "settings")
-    
     @IBOutlet weak var settingsControl: LOTAnimatedSwitch!
     
     var pomodoro = Pomodoro()
@@ -63,7 +61,7 @@ class TimerViewController: UIViewController {
             })
             pomodoro.start()
             
-            progressView.setDuration(duration: pomodoro.duration)
+            progressView.setDuration(duration: pomodoro.interval)
             progressView.start()
             
             startButton.setTitle("Pause", for: .normal)
@@ -83,11 +81,17 @@ class TimerViewController: UIViewController {
         if pomodoro.timeLeft <= 0 {
             pomodoro.reset()
             // TODO: pomodoro completion UI
+            
+            startButton.setTitle("Start", for: .normal)
+            timeLabel.text = "Completed"
+            resetButton.isEnabled = false
+            
             return
         }
         
         if pomodoro.isRunning {
             timeLabel.text = pomodoro.timeLeft.elapsedTimeToString()
+            progressView.tick(to: pomodoro.progress)
         } else {
             timeLabel.text = pomodoro.duration.elapsedTimeToString()
             pomodoro.pause()
