@@ -8,52 +8,68 @@
 
 import Foundation
 
-// A traditional Pomodoro timer.
-class Pomodoro {
+// A traditional Pomodoro timer. Keeps track of Timer()-related timestamps.
+struct Pomodoro {
     
     // MARK: - Properties
-    public weak var runner: Timer? // to be set by view controller
+    public weak var runner: Timer?
+    public let interval = 1.0
     
+    public var duration: Double = 60*0.1 {
+        didSet {
+            timeLeft = max(self.duration - self.elapsedTime, 0)
+        }
+    }
     public var startTimestamp: Double = 0
-    public var elapsedTime: Double = 0
+    public var elapsedTime: Double = 0 {
+        didSet {
+            timeLeft = max(self.duration - self.elapsedTime, 0)
+        }
+    }
+    public lazy var timeLeft: Double = {
+        return max(self.duration - self.elapsedTime, 0)
+    }()
 
     public var isRunning: Bool {
         return runner != nil
     }
     
-    public var length: Double = 60*25
     
-    public var progress: Double {
-        return elapsedTime / length
-    }
     
     // MARK: - Functions
-    public func setLength(to newLength: Double) {
-        length = newLength
+    public mutating func setLength(to newLength: Double) {
+        duration = newLength
     }
     
-    public func start() {
+    public mutating func start() {
         startTimestamp = Date().timeIntervalSinceReferenceDate - elapsedTime
     }
     
-    public func pause() {
+    public mutating func updateElapsedTime() {
         elapsedTime = Date().timeIntervalSinceReferenceDate - startTimestamp
+    }
+    
+    public mutating func pause() {
+        updateElapsedTime()
         stopRunner()
     }
     
-    public func reset() {
+    public mutating func reset() {
         startTimestamp = 0
         elapsedTime = 0
         stopRunner()
     }
     
-    private func stopRunner()  {
+    fileprivate mutating func stopRunner()  {
         runner?.invalidate()
         runner = nil
     }
     
-    
-    
+}
+
+// MARK: Errors
+enum PomodoroError : Error {
+    case negativeTimeLeft
 }
 
 // MARK: - Helper extension to format elapsed time
@@ -61,8 +77,7 @@ extension Double {
     func elapsedTimeToString() -> String {
         let minutes = Int(self / 60)
         let seconds = Int(self.truncatingRemainder(dividingBy: 60))
-        let milliseconds = Int((self * 10).truncatingRemainder(dividingBy: 10))
         
-        return String(format: "%02d:%02d.%d", minutes, seconds, milliseconds)
+        return String(format: "%02d:%02d", minutes, seconds)
     }
 }

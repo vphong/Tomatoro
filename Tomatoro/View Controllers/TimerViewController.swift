@@ -22,7 +22,7 @@ class TimerViewController: UIViewController {
     
     @IBOutlet weak var settingsControl: LOTAnimatedSwitch!
     
-    let pomodoro = Pomodoro()
+    var pomodoro = Pomodoro()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,26 +30,18 @@ class TimerViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         resetButton.isEnabled = false
-        timeLabel.text = pomodoro.length.elapsedTimeToString()
-        
+        timeLabel.text = pomodoro.duration.elapsedTimeToString()
         
         settingsControl.animationView.setAnimation(named: "settings")
         settingsControl.animationView.frame = CGRect(x: 0, y: 0, width: 140, height: 140)
         settingsControl.animationView.contentMode = .scaleAspectFill
         settingsControl.animationView.backgroundColor = .clear
         
-//        settingsView.translatesAutoresizingMaskIntoConstraints = false
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillLayoutSubviews() {
-        
-//        settingsView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-//        settingsView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
     
     
@@ -61,35 +53,47 @@ class TimerViewController: UIViewController {
         if pomodoro.isRunning {
             // pause
             pomodoro.pause()
-            startButton.setTitle("Start", for: .normal)
+            progressView.pause()
+            startButton.setTitle("Resume", for: .normal)
         } else {
             // play
-            pomodoro.runner = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(TimerViewController.updateTimeLabel), userInfo: nil, repeats: true)
+            pomodoro.runner = Timer.scheduledTimer(withTimeInterval: pomodoro.interval, repeats: true, block: { (timer) in
+                self.pomodoro.updateElapsedTime()
+                self.updateTimeLabel()
+            })
             pomodoro.start()
+            
+            progressView.setDuration(duration: pomodoro.duration)
+            progressView.start()
+            
             startButton.setTitle("Pause", for: .normal)
         }
     }
     
     @IBAction func resetButtonTapped(_ sender: Any) {
-        timeLabel.text = pomodoro.length.elapsedTimeToString()
+        timeLabel.text = pomodoro.duration.elapsedTimeToString()
         startButton.setTitle("Start", for: .normal)
         pomodoro.reset()
+        progressView.stop()
         resetButton.isEnabled = false
     }
     
-    
-    
-    @objc func updateTimeLabel() {
+    func updateTimeLabel() {
         
-        let timeLeft = pomodoro.length - (Date().timeIntervalSinceReferenceDate - pomodoro.startTimestamp)
+        if pomodoro.timeLeft <= 0 {
+            pomodoro.reset()
+            // TODO: pomodoro completion UI
+            return
+        }
+        
         if pomodoro.isRunning {
-            let progress = timeLeft / pomodoro.length
-            timeLabel.text = timeLeft.elapsedTimeToString()
+            timeLabel.text = pomodoro.timeLeft.elapsedTimeToString()
         } else {
-            timeLabel.text = pomodoro.length.elapsedTimeToString()
+            timeLabel.text = pomodoro.duration.elapsedTimeToString()
             pomodoro.pause()
         }
     }
+    
     
     @IBAction func settingsButtonTapped(_ sender: Any) {
         print("hi")
