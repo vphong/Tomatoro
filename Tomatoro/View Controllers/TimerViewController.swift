@@ -83,6 +83,7 @@ class TimerViewController: UIViewController {
         if pomodoro.timeLeft <= 0 {
             pomodoro.reset()
             // TODO: pomodoro completion UI
+            timeLabel.text = "00:00"
             return
         }
         

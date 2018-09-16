@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProgressView: UIView, CAAnimationDelegate {
+@IBDesignable class ProgressView: UIView, CAAnimationDelegate {
     
     // MARK: - Properties
     fileprivate let animation = CABasicAnimation(keyPath: "strokeEnd")
@@ -16,10 +16,10 @@ class ProgressView: UIView, CAAnimationDelegate {
     fileprivate var duration = 0.0
     
     // lazy initalization
-    fileprivate lazy var trackLayer: CAShapeLayer = {
+    @IBInspectable fileprivate lazy var trackLayer: CAShapeLayer = {
         return CAShapeLayer()
     }()
-    fileprivate lazy var progressLayer: CAShapeLayer = {
+    @IBInspectable fileprivate lazy var progressLayer: CAShapeLayer = {
         return CAShapeLayer()
     }()
     
@@ -40,6 +40,7 @@ class ProgressView: UIView, CAAnimationDelegate {
         trackLayer = createLayer(color: UIColor.lightGray.cgColor)
         progressLayer = createLayer(color: UIColor.cyan.cgColor)
         progressLayer.strokeEnd = 0.0
+        progressLayer.transform = CATransform3DMakeRotation(-CGFloat.pi/2, 0, 0, 1)
         
         self.layer.addSublayer(trackLayer)
         self.layer.addSublayer(progressLayer)
@@ -64,14 +65,16 @@ class ProgressView: UIView, CAAnimationDelegate {
     override func layoutSubviews() {
         setLayerPath(layer: self.trackLayer)
         setLayerPath(layer: self.progressLayer)
+        
+        progressLayer.frame = trackLayer.frame
+        progressLayer.position = trackLayer.position
+        progressLayer.position.y += self.frame.height
     }
     
     fileprivate func setLayerPath(layer: CAShapeLayer) {
         let center = CGPoint(x: self.frame.width/2, y: self.frame.width/2)
         let radius = self.frame.width/2 - 40
-        let startAngle = -CGFloat.pi / 2
-        let endAngle = 3 * CGFloat.pi / 2
-        layer.path = UIBezierPath(arcCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true).cgPath
+        layer.path = UIBezierPath(arcCenter: center, radius: radius, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true).cgPath
     }
     
     // MARK: - Animation
