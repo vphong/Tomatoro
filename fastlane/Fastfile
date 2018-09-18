@@ -20,4 +20,10 @@ platform :ios do
   lane :screenshots do
     capture_screenshots(workspace: "Tomatoro.xcworkspace", scheme: "Tomatoro")
   end
+
+  lane :tests do
+    run_tests(workspace: "Tomatoro.xcworkspace", clean: true)
+  end
+
+
 end

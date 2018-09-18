@@ -12,8 +12,8 @@
 		CA013B9221472D3300336F96 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CA013B9021472D3300336F96 /* loading.json */; };
 		CA013B9D2147315700336F96 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA013B9C2147315700336F96 /* Splash.storyboard */; };
 		CA095CFC215077D300CD2FF2 /* TomatoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA095CFB215077D300CD2FF2 /* TomatoroUITests.swift */; };
-		CA095D04215077ED00CD2FF2 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA095D03215077ED00CD2FF2 /* SnapshotHelper.swift */; };
 		CA095D062150A5C200CD2FF2 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA095D052150A5C200CD2FF2 /* ProgressView.swift */; };
+		CA095D082150AF9400CD2FF2 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA095D072150AF9400CD2FF2 /* SnapshotHelper.swift */; };
 		CA4342C3214ED3A6007990C5 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4342C2214ED3A6007990C5 /* Gradients.swift */; };
 		CA62B689214203B3008C8DED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B688214203B3008C8DED /* AppDelegate.swift */; };
 		CA62B68E214203B3008C8DED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA62B68C214203B3008C8DED /* Main.storyboard */; };
@@ -53,8 +53,8 @@
 		CA095CF9215077D300CD2FF2 /* TomatoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA095CFB215077D300CD2FF2 /* TomatoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoroUITests.swift; sourceTree = "<group>"; };
 		CA095CFD215077D300CD2FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA095D03215077ED00CD2FF2 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		CA095D052150A5C200CD2FF2 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressView.swift; path = Tomatoro/Views/ProgressView.swift; sourceTree = SOURCE_ROOT; };
+		CA095D072150AF9400CD2FF2 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		CA4342C2214ED3A6007990C5 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
 		CA62B685214203B3008C8DED /* Tomatoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomatoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA62B688214203B3008C8DED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		CA095CFA215077D300CD2FF2 /* TomatoroUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CA095D03215077ED00CD2FF2 /* SnapshotHelper.swift */,
+				CA095D072150AF9400CD2FF2 /* SnapshotHelper.swift */,
 				CA095CFB215077D300CD2FF2 /* TomatoroUITests.swift */,
 				CA095CFD215077D300CD2FF2 /* Info.plist */,
 			);
@@ -402,7 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA095CFC215077D300CD2FF2 /* TomatoroUITests.swift in Sources */,
-				CA095D04215077ED00CD2FF2 /* SnapshotHelper.swift in Sources */,
+				CA095D082150AF9400CD2FF2 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
