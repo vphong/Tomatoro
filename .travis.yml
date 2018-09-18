@@ -1,0 +1,6 @@
+osx_image: xcode9.4
+language: swift
+cache:
+  - bundler
+script:
+  - fastlane ios tests

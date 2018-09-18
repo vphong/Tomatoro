@@ -18,7 +18,7 @@ default_platform(:ios)
 platform :ios do
 
   before_all do 
-    setup_circle_ci
+    setup_travis
     cocoapods
   end
 
@@ -27,13 +27,16 @@ platform :ios do
     capture_screenshots(workspace: "Tomatoro.xcworkspace", scheme: "Tomatoro")
   end
 
+  desc "Run tests and generate code coverage"
   lane :tests do
     run_tests(
       workspace: "Tomatoro.xcworkspace", 
       scheme: "TomatoroTests",
       clean: true
     )
+    xcov(
+      scheme: "TomatoroTests"
+    )
   end
-
 
 end
