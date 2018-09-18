@@ -25,7 +25,7 @@ Generate new localized screenshots
 ```
 fastlane ios tests
 ```
-
+Run tests and generate code coverage
 
 ----
 
