@@ -12,15 +12,14 @@
 		CA013B9221472D3300336F96 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CA013B9021472D3300336F96 /* loading.json */; };
 		CA013B9D2147315700336F96 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA013B9C2147315700336F96 /* Splash.storyboard */; };
 		CA095CFC215077D300CD2FF2 /* TomatoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA095CFB215077D300CD2FF2 /* TomatoroUITests.swift */; };
-		CA095D062150A5C200CD2FF2 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA095D052150A5C200CD2FF2 /* ProgressView.swift */; };
 		CA095D082150AF9400CD2FF2 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA095D072150AF9400CD2FF2 /* SnapshotHelper.swift */; };
-		CA4342C3214ED3A6007990C5 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4342C2214ED3A6007990C5 /* Gradients.swift */; };
 		CA62B689214203B3008C8DED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B688214203B3008C8DED /* AppDelegate.swift */; };
 		CA62B68E214203B3008C8DED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA62B68C214203B3008C8DED /* Main.storyboard */; };
 		CA62B690214203B6008C8DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA62B68F214203B6008C8DED /* Assets.xcassets */; };
 		CA62B69E214203B6008C8DED /* TomatoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B69D214203B6008C8DED /* TomatoroTests.swift */; };
 		CA62B6A9214204B7008C8DED /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B6A8214204B7008C8DED /* TimerViewController.swift */; };
 		CA62B6AE2142CF3A008C8DED /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B6AD2142CF3A008C8DED /* Pomodoro.swift */; };
+		CAD25D8E215173560053C93E /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD25D8D215173560053C93E /* ProgressView.swift */; };
 		CE352F2CCFF92F9FF5E7E8E7 /* Pods_TomatoroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236BFCD39BF6B82E4E312894 /* Pods_TomatoroTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,9 +52,7 @@
 		CA095CF9215077D300CD2FF2 /* TomatoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA095CFB215077D300CD2FF2 /* TomatoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoroUITests.swift; sourceTree = "<group>"; };
 		CA095CFD215077D300CD2FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA095D052150A5C200CD2FF2 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressView.swift; path = Tomatoro/Views/ProgressView.swift; sourceTree = SOURCE_ROOT; };
 		CA095D072150AF9400CD2FF2 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
-		CA4342C2214ED3A6007990C5 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
 		CA62B685214203B3008C8DED /* Tomatoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomatoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA62B688214203B3008C8DED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA62B68D214203B3008C8DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +63,7 @@
 		CA62B69F214203B6008C8DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA62B6A8214204B7008C8DED /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		CA62B6AD2142CF3A008C8DED /* Pomodoro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pomodoro.swift; sourceTree = "<group>"; };
+		CAD25D8D215173560053C93E /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressView.swift; path = Tomatoro/Views/ProgressView.swift; sourceTree = SOURCE_ROOT; };
 		EF12D19BCA8FE4DE702146B8 /* Pods_Tomatoro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tomatoro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,15 +141,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		CA517C3421438E1600853686 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CA095D052150A5C200CD2FF2 /* ProgressView.swift */,
-			);
-			name = Views;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		CA62B67C214203B3008C8DED = {
 			isa = PBXGroup;
 			children = (
@@ -178,15 +167,14 @@
 		CA62B687214203B3008C8DED /* Tomatoro */ = {
 			isa = PBXGroup;
 			children = (
+				CAD25D8C215173150053C93E /* Views */,
 				CA62B6AC21424F91008C8DED /* Models */,
-				CA517C3421438E1600853686 /* Views */,
 				CA013B992147310700336F96 /* View Controllers */,
 				CA62B68C214203B3008C8DED /* Main.storyboard */,
 				CA62B688214203B3008C8DED /* AppDelegate.swift */,
 				CA013B9C2147315700336F96 /* Splash.storyboard */,
 				CA62B68F214203B6008C8DED /* Assets.xcassets */,
 				CA62B694214203B6008C8DED /* Info.plist */,
-				CA4342C2214ED3A6007990C5 /* Gradients.swift */,
 			);
 			path = Tomatoro;
 			sourceTree = "<group>";
@@ -206,6 +194,15 @@
 				CA62B6AD2142CF3A008C8DED /* Pomodoro.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CAD25D8C215173150053C93E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAD25D8D215173560053C93E /* ProgressView.swift */,
+			);
+			name = Views;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,10 +408,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA62B6A9214204B7008C8DED /* TimerViewController.swift in Sources */,
-				CA4342C3214ED3A6007990C5 /* Gradients.swift in Sources */,
+				CAD25D8E215173560053C93E /* ProgressView.swift in Sources */,
 				CA62B689214203B3008C8DED /* AppDelegate.swift in Sources */,
 				CA62B6AE2142CF3A008C8DED /* Pomodoro.swift in Sources */,
-				CA095D062150A5C200CD2FF2 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
