@@ -71,6 +71,10 @@ import Lottie
                 print("\(self.pomodoro.elapsedTime)")
                 self.updateTimeLabel()
             })
+            if pomodoro.timeLeft <= 0 {
+                
+            }
+            
             pomodoro.start()
             
             progressView.setDuration(duration: Double(pomodoro.duration))

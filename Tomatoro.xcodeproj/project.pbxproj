@@ -11,6 +11,8 @@
 		CA013B9121472D3300336F96 /* settings.json in Resources */ = {isa = PBXBuildFile; fileRef = CA013B8F21472D3300336F96 /* settings.json */; };
 		CA013B9221472D3300336F96 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = CA013B9021472D3300336F96 /* loading.json */; };
 		CA013B9D2147315700336F96 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA013B9C2147315700336F96 /* Splash.storyboard */; };
+		CA095CFC215077D300CD2FF2 /* TomatoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA095CFB215077D300CD2FF2 /* TomatoroUITests.swift */; };
+		CA095D04215077ED00CD2FF2 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA095D03215077ED00CD2FF2 /* SnapshotHelper.swift */; };
 		CA4342C3214ED3A6007990C5 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4342C2214ED3A6007990C5 /* Gradients.swift */; };
 		CA517C3321438E0E00853686 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA517C3221438E0E00853686 /* ProgressView.swift */; };
 		CA62B689214203B3008C8DED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA62B688214203B3008C8DED /* AppDelegate.swift */; };
@@ -23,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CA095CFE215077D300CD2FF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA62B67D214203B3008C8DED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA62B684214203B3008C8DED;
+			remoteInfo = Tomatoro;
+		};
 		CA62B69A214203B6008C8DED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA62B67D214203B3008C8DED /* Project object */;
@@ -41,6 +50,10 @@
 		CA013B8F21472D3300336F96 /* settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = settings.json; sourceTree = "<group>"; };
 		CA013B9021472D3300336F96 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		CA013B9C2147315700336F96 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		CA095CF9215077D300CD2FF2 /* TomatoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TomatoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA095CFB215077D300CD2FF2 /* TomatoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoroUITests.swift; sourceTree = "<group>"; };
+		CA095CFD215077D300CD2FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA095D03215077ED00CD2FF2 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		CA4342C2214ED3A6007990C5 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
 		CA517C3221438E0E00853686 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		CA62B685214203B3008C8DED /* Tomatoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tomatoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +70,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CA095CF6215077D300CD2FF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA62B682214203B3008C8DED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,6 +124,16 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		CA095CFA215077D300CD2FF2 /* TomatoroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CA095D03215077ED00CD2FF2 /* SnapshotHelper.swift */,
+				CA095CFB215077D300CD2FF2 /* TomatoroUITests.swift */,
+				CA095CFD215077D300CD2FF2 /* Info.plist */,
+			);
+			path = TomatoroUITests;
+			sourceTree = "<group>";
+		};
 		CA1112472143464E00C047F7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +158,7 @@
 				CA1112472143464E00C047F7 /* Resources */,
 				CA62B687214203B3008C8DED /* Tomatoro */,
 				CA62B69C214203B6008C8DED /* TomatoroTests */,
+				CA095CFA215077D300CD2FF2 /* TomatoroUITests */,
 				CA62B686214203B3008C8DED /* Products */,
 				771859443420CBBECC1731DC /* Pods */,
 				2C267359F7E46617E3740387 /* Frameworks */,
@@ -139,6 +170,7 @@
 			children = (
 				CA62B685214203B3008C8DED /* Tomatoro.app */,
 				CA62B699214203B6008C8DED /* TomatoroTests.xctest */,
+				CA095CF9215077D300CD2FF2 /* TomatoroUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +211,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CA095CF8215077D300CD2FF2 /* TomatoroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA095D02215077D400CD2FF2 /* Build configuration list for PBXNativeTarget "TomatoroUITests" */;
+			buildPhases = (
+				CA095CF5215077D300CD2FF2 /* Sources */,
+				CA095CF6215077D300CD2FF2 /* Frameworks */,
+				CA095CF7215077D300CD2FF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA095CFF215077D300CD2FF2 /* PBXTargetDependency */,
+			);
+			name = TomatoroUITests;
+			productName = TomatoroUITests;
+			productReference = CA095CF9215077D300CD2FF2 /* TomatoroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CA62B684214203B3008C8DED /* Tomatoro */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA62B6A2214203B6008C8DED /* Build configuration list for PBXNativeTarget "Tomatoro" */;
@@ -227,6 +277,10 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = vphong;
 				TargetAttributes = {
+					CA095CF8215077D300CD2FF2 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = CA62B684214203B3008C8DED;
+					};
 					CA62B684214203B3008C8DED = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -251,11 +305,19 @@
 			targets = (
 				CA62B684214203B3008C8DED /* Tomatoro */,
 				CA62B698214203B6008C8DED /* TomatoroTests */,
+				CA095CF8215077D300CD2FF2 /* TomatoroUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CA095CF7215077D300CD2FF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA62B683214203B3008C8DED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,6 +397,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CA095CF5215077D300CD2FF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA095CFC215077D300CD2FF2 /* TomatoroUITests.swift in Sources */,
+				CA095D04215077ED00CD2FF2 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CA62B681214203B3008C8DED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,6 +429,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CA095CFF215077D300CD2FF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA62B684214203B3008C8DED /* Tomatoro */;
+			targetProxy = CA095CFE215077D300CD2FF2 /* PBXContainerItemProxy */;
+		};
 		CA62B69B214203B6008C8DED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CA62B684214203B3008C8DED /* Tomatoro */;
@@ -377,6 +453,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CA095D00215077D300CD2FF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TomatoroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.vphong.TomatoroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tomatoro;
+			};
+			name = Debug;
+		};
+		CA095D01215077D300CD2FF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TomatoroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.vphong.TomatoroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tomatoro;
+			};
+			name = Release;
+		};
 		CA62B6A0214203B6008C8DED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -572,6 +684,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CA095D02215077D400CD2FF2 /* Build configuration list for PBXNativeTarget "TomatoroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA095D00215077D300CD2FF2 /* Debug */,
+				CA095D01215077D300CD2FF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CA62B680214203B3008C8DED /* Build configuration list for PBXProject "Tomatoro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -41,22 +41,23 @@ import UIKit
     // MARK: - Layers
     
     fileprivate func createLayers() {
-        backgroundTrack = createTrack(color: UIColor.lightGray.withAlphaComponent(0.5).cgColor)
+//        backgroundTrack = createTrack(color: UIColor.lightGray.withAlphaComponent(0.5).cgColor)
         foregroundTrack = createTrack(color: UIColor.white.cgColor)
-        foregroundTrack.strokeEnd = 0.0
+        foregroundTrack.strokeEnd = 0.5
         foregroundTrack.transform = CATransform3DMakeRotation(-CGFloat.pi/2, 0, 0, 1)
+        foregroundTrack.shadowPath = circularPath(radiusOffset: 40)
         
-        backgroundDisc.path = circularPath(radiusOffset: 20)
-        backgroundDisc.fillColor = UIColor.white.withAlphaComponent(0.5).cgColor
-        backgroundDisc.zPosition = -10
+//        backgroundDisc.path = circularPath(radiusOffset: 20)
+//        backgroundDisc.fillColor = UIColor.white.withAlphaComponent(0.5).cgColor
+//        backgroundDisc.zPosition = -10
+//
+//        backgroundDisc.shadowPath = circularPath(radiusOffset: 30)
+//        backgroundDisc.shadowColor = UIColor.black.cgColor
+//        backgroundDisc.opacity = 1.0
+//        backgroundDisc.shadowOffset = CGSize(width: 5, height: 5)
+//        backgroundDisc.shadowRadius = 10
         
-        backgroundDisc.shadowPath = circularPath(radiusOffset: 30)
-        backgroundDisc.shadowColor = UIColor.black.cgColor
-        backgroundDisc.opacity = 1.0
-        backgroundDisc.shadowOffset = CGSize(width: 5, height: 5)
-        backgroundDisc.shadowRadius = 10
-        
-        self.layer.addSublayer(backgroundTrack)
+//        self.layer.addSublayer(backgroundTrack)
         self.layer.addSublayer(foregroundTrack)
         self.layer.addSublayer(backgroundDisc)
     }
@@ -72,7 +73,7 @@ import UIKit
         layer.strokeColor = color
         layer.strokeStart = 0.0
         layer.strokeEnd = 1.0
-        layer.lineWidth = 2.0
+        layer.lineWidth = 5.0
         
         return layer
     }
@@ -80,7 +81,7 @@ import UIKit
     override func layoutSubviews() {
         self.backgroundTrack.path = circularPath(radiusOffset: 40)
         self.foregroundTrack.path = circularPath(radiusOffset: 40)
-        self.backgroundDisc.path = circularPath(radiusOffset: 20)
+//        self.backgroundDisc.path = circularPath(radiusOffset: 20)
         
         foregroundTrack.frame = backgroundTrack.frame
         foregroundTrack.position = backgroundTrack.position
