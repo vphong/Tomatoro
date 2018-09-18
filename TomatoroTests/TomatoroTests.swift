@@ -55,9 +55,9 @@ class TomatoroTests: XCTestCase {
         
         let totalTestTime = pauseTime - startTime
         
-        XCTAssertEqual(totalTestTime, pomodoroUnderTest.elapsedTime, accuracy: testAccuracy)
+        XCTAssertEqual(totalTestTime, pomodoroUnderTest.elapsedTime, accuracy: 1)
         XCTAssertEqual(startTime, pomodoroUnderTest.startTimestamp, accuracy: testAccuracy)
-        XCTAssertEqual(pomodoroUnderTest.duration - totalTestTime, pomodoroUnderTest.timeLeft, accuracy: testAccuracy)
+        XCTAssertEqual(pomodoroUnderTest.duration - totalTestTime, pomodoroUnderTest.timeLeft, accuracy: 1)
         XCTAssertFalse(pomodoroUnderTest.isRunning)
         
     }
@@ -73,7 +73,7 @@ class TomatoroTests: XCTestCase {
             self.pomodoroUnderTest.pause()
             let pauseTime = Date().timeIntervalSinceReferenceDate
             
-            XCTAssertEqual(startTime - pauseTime, self.pomodoroUnderTest.elapsedTime, accuracy: self.testAccuracy)
+            XCTAssertEqual((startTime - pauseTime), self.pomodoroUnderTest.elapsedTime, accuracy: self.testAccuracy)
             XCTAssertEqual(self.pomodoroUnderTest.interval, self.pomodoroUnderTest.elapsedTime, accuracy: self.testAccuracy)
             XCTAssertEqual(self.pomodoroUnderTest.duration - startTime - pauseTime, self.pomodoroUnderTest.timeLeft, accuracy: self.testAccuracy)
         }

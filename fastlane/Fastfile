@@ -22,7 +22,12 @@ platform :ios do
   end
 
   lane :tests do
-    run_tests(workspace: "Tomatoro.xcworkspace", clean: true)
+    cocoapods()
+    run_tests(
+      workspace: "Tomatoro.xcworkspace", 
+      scheme: "TomatoroTests",
+      clean: true
+    )
   end
 
 
