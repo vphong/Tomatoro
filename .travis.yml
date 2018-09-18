@@ -3,4 +3,5 @@ language: swift
 cache:
   - bundler
 script:
+  - sudo bundle install
   - fastlane ios tests

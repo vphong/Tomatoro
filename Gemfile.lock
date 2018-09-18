@@ -232,10 +232,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
   cocoapods
   fastlane
   travis
+  unf_ext (~> 0.0.7.5)
   xcov
 
 BUNDLED WITH
-   1.16.3
+   1.16.5
