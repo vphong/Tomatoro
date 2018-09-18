@@ -18,6 +18,7 @@ default_platform(:ios)
 platform :ios do
   desc "Generate new localized screenshots"
   lane :screenshots do
+    cocoapods()
     capture_screenshots(workspace: "Tomatoro.xcworkspace", scheme: "Tomatoro")
   end
 
