@@ -27,13 +27,17 @@ platform :ios do
     capture_screenshots(workspace: "Tomatoro.xcworkspace", scheme: "Tomatoro")
   end
 
-  desc "Run tests and generate code coverage"
+  desc "Run tests"
   lane :tests do
     run_tests(
       workspace: "Tomatoro.xcworkspace", 
       scheme: "Tomatoro",
       clean: true
     )
+  end
+
+  desc "Generate code coverage"
+  lane :coverage do
     xcov(
       workspace: "Tomatoro.xcworkspace",
       scheme: "Tomatoro",
