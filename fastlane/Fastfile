@@ -36,7 +36,8 @@ platform :ios do
     )
     xcov(
       workspace: "Tomatoro.xcworkspace",
-      scheme: "Tomatoro"
+      scheme: "Tomatoro",
+      output_directory: "./xccov_output"
     )
     # slather(  
     #   travis: true,  
