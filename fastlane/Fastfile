@@ -36,7 +36,6 @@ platform :ios do
     )
   end
 
-
   lane :coverage do
     xcov(
       workspace: "Tomatoro.xcworkspace",
@@ -44,5 +43,23 @@ platform :ios do
       output_directory: "./xccov_output"
     )
   end
-  
+
+  lane :beta do
+    # Ensure that your git status is not dirty
+    ensure_git_status_clean
+
+    # Increment the build number (not the version number)
+    # Providing the xcodeproj is optional
+    increment_build_number
+
+    # Commit the version bump
+    commit_version_bump
+
+    # Add a git tag for this build. This will automatically
+    # use an appropriate git tag name
+    add_git_tag
+
+    # Push the new commit and tag back to your git remote
+    # push_to_git_remote
+  end
 end
