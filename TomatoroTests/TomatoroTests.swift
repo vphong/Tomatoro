@@ -16,7 +16,7 @@ class TomatoroTests: XCTestCase {
     
     let millisecond = 0.1
     let second = 1.0
-    let testAccuracy = 0.00001
+    let testAccuracy = 0.0001
     
     
     override func setUp() {
