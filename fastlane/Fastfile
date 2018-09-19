@@ -34,18 +34,15 @@ platform :ios do
       scheme: "Tomatoro",
       clean: true
     )
+  end
+
+
+  lane :coverage do
     xcov(
       workspace: "Tomatoro.xcworkspace",
       scheme: "Tomatoro",
       output_directory: "./xccov_output"
     )
-    # slather(  
-    #   travis: true,  
-    #   scheme: "Tomatoro",  
-    #   proj: "Tomatoro.xcodeproj",  
-    #   workspace: "Tomatoro.xcworkspace"
-    # )
-
   end
-
+  
 end
