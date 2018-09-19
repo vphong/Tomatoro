@@ -4,15 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Tomatoro.xcscheme</key>
+		<key>Tomatoro.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>TomatoroUITests.xcscheme</key>
+		<key>TomatoroTests.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>4</integer>
+		</dict>
+		<key>TomatoroUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
