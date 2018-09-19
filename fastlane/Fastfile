@@ -35,8 +35,16 @@ platform :ios do
       clean: true
     )
     xcov(
+      workspace: "Tomatoro.xcworkspace",
       scheme: "Tomatoro"
     )
+    # slather(  
+    #   travis: true,  
+    #   scheme: "Tomatoro",  
+    #   proj: "Tomatoro.xcodeproj",  
+    #   workspace: "Tomatoro.xcworkspace"
+    # )
+
   end
 
 end
